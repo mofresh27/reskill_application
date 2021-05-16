@@ -1,0 +1,67 @@
+from django.db import models
+
+
+# Create your models here.
+
+class Student(models.Model):
+
+    full_name = models.CharField(max_length = 100)
+    graduation_year = models.IntegerField()
+
+    class Meta:
+        verbose_name_plural = "student"
+
+    def __str__(self):
+        return self.full_name
+
+
+
+class School(models.Model):
+
+    school_name = models.CharField(max_length = 200)
+
+    class Meta:
+        verbose_name_plural = "school"
+
+    def __str__(self):
+        return self.school_name
+
+
+class Department(models.Model):
+
+    department_name = models.CharField (max_length = 100)
+
+    class Meta:
+        verbose_name_plural = "department"
+
+    def __str__(self):
+        return self.department_name
+
+
+class Faculty(models.Model):
+    
+    professor_name = models.CharField(max_length = 200)
+
+    class Meta:
+        verbose_name_plural = "faculty"
+
+    def __str__(self):
+        return self.professor_name
+
+class Grade(models.Model):
+    grad_level = models.CharField(max_length = 100)
+
+    class Meta:
+        verbose_name_plural = "grade"
+
+    def __str__(self):
+        return self.grad_level
+
+class Certificate(models.Model):
+    degree_type = models.CharField(max_length = 100)
+
+    class Meta:
+        verbose_name_plural = "certificate"
+
+    def __str__(self):
+        return self.degree_type
