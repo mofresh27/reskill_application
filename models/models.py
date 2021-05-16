@@ -65,3 +65,12 @@ class Certificate(models.Model):
 
     def __str__(self):
         return self.degree_type
+
+
+# class School(models.Model):
+#     name = models.CharField(max_length =400)
+#     address = models.CharField(max_length = 300)
+#     zip_code = models.IntegerField()
+    
+# class Student(models.Model):
+#     school = models.ForeignKey(School, on_delete=models.CASCADE)
